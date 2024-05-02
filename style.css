@@ -1,3 +1,4 @@
+/* This is a list to modify all this tags font */
 h1,
 h2,
 h3,
@@ -5,13 +6,24 @@ h4,
 p,
 li {
   font-family: sans-serif;
+  color: #444;
+}
+/* Another list to modify headings color all at once and not one by one */
+h1,
+h2,
+h3 {
+  color: #1098ad;
 }
 
+/* --------------------------------- */
 h1 {
-  color: rgb(19, 31, 194);
+  /* color: rgb(19, 31, 194); */
+  /* color: #1098ad; */
+  /* color: rgba(154, 235, 235, 255); */
   font-size: 30px;
   text-transform: uppercase;
   font-style: italic;
+  /* border: 10px solid #444 ; */
 }
 
 h2 {
@@ -43,7 +55,7 @@ li {
   font-size: 16px;
 }
 /* This might work in this case, but if you have plenty of this, it can be tricky and not
-very useful, so we can name the elements using id, each id can be only named once, it cannoy
+very useful, so we can name the elements using id, each id can be only named once, it cannot
  be repeated, instead we can use clases and the name must be separated by a '-'
   e.g = related-author, and to call it we must use '.'*/
 #author {
@@ -58,4 +70,42 @@ very useful, so we can name the elements using id, each id can be only named onc
 
 .related {
   list-style: none;
+}
+/* classes are more relible than ID */
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad; /*Solid-dash-dotted are the styles*/
+  border-bottom: 5px solid #1098ad;
+}
+
+/* body {
+  /* background-color: rgb(80, 80, 80); 
+} */
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/* This is a pseudo-class that detects the first element of a list and makes it bold */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  /*even, odd, or n number*/
+  color: red;
+}
+
+article p:last-child {
+  /* In this case, the first child (now last) of header it is not paragraph(p), but header, that is why 
+  the color did not change, in this situation is not really good to use it*/
+  color: red;
 }
