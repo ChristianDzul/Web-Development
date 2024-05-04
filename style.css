@@ -1,13 +1,15 @@
-/* This is a list to modify all this tags font */
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: sans-serif;
+/* UNIVERSAL SELECTOR  affect all elements, some of them not,like for example in color for h2 
+beacuse they are overwritten later in the code*/
+/* * {
+  border-top: 10px solid #1098ad;
+} */
+/* -------------- */
+body {
   color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad;
 }
+
 /* Another list to modify headings color all at once and not one by one */
 h1,
 h2,
@@ -108,4 +110,33 @@ article p:last-child {
   /* In this case, the first child (now last) of header it is not paragraph(p), but header, that is why 
   the color did not change, in this situation is not really good to use it*/
   color: red;
+}
+
+/* Styling links (can be grouped together) */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: #777; */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+/* -----INHERITANCE----- */
+/* nav a:link {
+  font-size: 18px;
+} */
+/* or */
+nav {
+  font-size: 18px;
 }
